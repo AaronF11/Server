@@ -5,9 +5,16 @@ using System.Text;
 
 class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// Este programa implementa un servidor TCP simple que espera la conexión de un cliente,
+    /// realiza una autenticación básica, responde a comandos de eco y permite cerrar la conexión.
+    /// El servidor escucha en el puerto especificado y maneja un cliente a la vez.
+    /// </summary>
+    /// <param name="args">Argumentos de línea de comando (no utilizados).</param>
+    public static void Main(string[] args)
     {
         TcpListener? server = null;
+
         try
         {
             int port = 12345;
